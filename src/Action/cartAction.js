@@ -1,7 +1,7 @@
 
 import { useSelector } from "react-redux";
 import {
- CART_LIST_SUCCESS,
+ CART_LIST_SUCCESS, CART_REMOVE_ITEM
 } from "../constant/ProductConstant";
 
 export const addToCart = (product, qty) => async (dispatch, getState) => {
@@ -19,6 +19,14 @@ debugger
         countInStock: product.countInStock,
         qty: Number(qty),
       },
+  });
+  localStorage.setItem("cartItems", JSON.stringify(getState().cart.cartItems));
+};
+
+export const removeFromCart = (id) => (dispatch, getState) => {
+  dispatch({
+    type: CART_REMOVE_ITEM,
+    payload: id,
   });
   localStorage.setItem("cartItems", JSON.stringify(getState().cart.cartItems));
 };

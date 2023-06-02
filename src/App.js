@@ -7,6 +7,8 @@ import ProductList from './pages/ProductList';
 import Header from './components/Header';
 import ProductDetail from "./pages/ProductDetail";
 import CartScreen from "./pages/CartScreen";
+import CartModal from "./pages/CartModal";
+import OrderDetail from "./pages/OrderDetail";
 
 function App() {
   return (
@@ -19,6 +21,8 @@ function App() {
             <Route path="/product/:id" element={<ProductDetail />} />
             <Route path="/cart/:id" element={<CartScreen />} />
             <Route path="/cart" element={<CartScreen />} />
+            <Route path="/orderdetails" element={<OrderDetail />} />
+            
           </Routes>
         </Container>
       </main>
