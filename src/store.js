@@ -6,8 +6,9 @@ import {
   productListReducer,
   productDetailsReducer
 } from './Reducer/ProductReducer';
+
  import { cartReducers } from "./Reducer/cartReducer";
-import { userReducer } from "./Reducer/userReducer";
+ import { userReducer } from "./Reducer/userReducer";
 
 const reducer = combineReducers({
   productList: productListReducer,
