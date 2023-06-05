@@ -23,6 +23,13 @@ debugger
   localStorage.setItem("cartItems", JSON.stringify(getState().cart.cartItems));
 };
 
+export const restCart = () => (dispatch, getState)=>{
+  dispatch({
+    type: "RESET_CART",
+    payload: []
+  })
+}
+
 export const removeFromCart = (id) => (dispatch, getState) => {
   dispatch({
     type: CART_REMOVE_ITEM,

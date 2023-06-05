@@ -6,7 +6,7 @@ import * as Yup from "yup";
 import { useNavigate, Link } from "react-router-dom";
 import { addUserInfo } from "../Action/addUserInfo";
 
-import { addToCart } from "../Action/cartAction";
+import { addToCart, restCart } from "../Action/cartAction";
 
 import { Row, Col, ListGroup, Image, Button, Card } from "react-bootstrap";
 
@@ -36,6 +36,7 @@ const AddUserInfo = () => {
     alert("Successfully Submitted");
     navigate("/orderdetails");
     resetForm();
+    dispatch(restCart());
   };
   return (
     <div className="container">

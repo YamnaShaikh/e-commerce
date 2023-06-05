@@ -29,14 +29,16 @@ const Header = () => {
             <Navbar.Toggle aria-controls="basic-navbar-nav" />
             <Navbar.Collapse id="basic-nabar-nav">
               <Nav className="ms-auto">
-                <LinkContainer to="">
+                <LinkContainer to="/cart">
                   <Nav.Link>
-                    <Button variant="success" onClick={handleShow}>Cart</Button>
+                    <Button variant="success" 
+                    // onClick={handleShow}
+                    >Cart</Button>
                   </Nav.Link>
                 </LinkContainer>
-                <LinkContainer to="/login">
+                <LinkContainer to="/orderdetails">
                   <Nav.Link>
-                    <i className="fas fa-user"></i>Log In
+                    <i className="fas fa-user"></i>Orderdetails
                   </Nav.Link>
                 </LinkContainer>
               </Nav>

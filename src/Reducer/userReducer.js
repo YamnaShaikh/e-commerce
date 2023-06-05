@@ -1,7 +1,7 @@
 import { CREATE_USER } from "../constant/ProductConstant";
 
 const initialState = {
-    users: []
+    userInfo: []
   };
 export const userReducer = (state = initialState, action) => {
      debugger;
@@ -9,7 +9,7 @@ export const userReducer = (state = initialState, action) => {
       case CREATE_USER:
         return {
           ...state,
-          users: [...state.users, action.payload],
+          userInfo: [...state.userInfo, action.payload],
         }
 
         default:

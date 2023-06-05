@@ -77,6 +77,34 @@ const products = [
     rating: 4,
     numReviews: 4,
   },
+  {
+    id: 7,
+    name: "Brown Perfume",
+    description: "Royal_Mirage Sport Brown Perfume for Men & Women - 120ml",
+    price: 40,
+    discountPercentage: 15.66,
+    countInStock: 8,
+    rating: 4,
+    numReviews: 4,
+    brand: "Royal_Mirage",
+    category: "fragrances",
+    thumbnail: "https://i.dummyjson.com/data/products/12/thumbnail.jpg",
+    image: "/images/3.png",
+    },
+    {
+      id: 8,
+      name: "Microsoft Surface Laptop 4",
+      description: "Style and speed. Stand out on HD video calls backed by Studio Mics. Capture ideas on the vibrant touchscreen.",
+      price: 1499,
+      discountPercentage: 10.23,
+      countInStock: 8,
+      rating: 4,
+      numReviews: 4,
+      brand: "Microsoft Surface",
+      category: "laptops",
+      thumbnail: "https://i.dummyjson.com/data/products/8/thumbnail.jpg",
+       image : "/images/laptop.jpg"
+      },
 ];
 
 export default products;

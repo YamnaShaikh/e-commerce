@@ -21,11 +21,13 @@ const OrderDetail = () => {
   const cart = useSelector((state) => state.cart);
   const cartItems = cart.cartItems;
 
+  
+
+  // const userInfo = useSelector((state) => state.userInfo);
+  // const users = userInfo.userInfo;
+
+  const users = JSON.parse(localStorage.getItem("userInfo"))
   debugger;
-
-  const userInfo = useSelector((state) => state.userInfo);
-  const users = userInfo.users;
-
   return (
     <div>
       <Table className="table table-light table-hover">
@@ -37,11 +39,11 @@ const OrderDetail = () => {
             <th scope="col">Phone#</th>
             <th>
               <tr>
+              <th scope="col">Product </th>
                 <th scope="col">Product Name</th>
                 <th scope="col">Price</th>
               </tr>
             </th>
-            <th scope="col">action</th>
           </tr>
         </thead>
         <tbody>
@@ -53,28 +55,21 @@ const OrderDetail = () => {
             return (
               <>
                 {console.log(users)}
-                <tr className="table-light" key={user.id}>
-                  <th scope="row">{user.id}</th>
+                <tr className="table-light" key={user.userid}>
+                  <td scope="row">{user.userid}</td>
                   <td>{user.name}</td>
                   <td>{user.email}</td>
-                  <td>{user.role}</td>
+                  <td>{user.phone}</td>
                   <td>
                     {user.cartItems.map((item) => {
                       return (
                         <tr>
+                        <td><img src={item.image} style={{with: '100px', height: '100px'}} /></td>
                           <td>{item.name}</td>
                           <td>{item.price}</td>
                         </tr>
                       );
                     })}
-                  </td>
-                  <td>
-                    <button
-                      type="button"
-                      // onClick={() => deleteRecord(user.id)}
-                    >
-                      <FontAwesomeIcon icon={faTrashCan} />
-                    </button>
                   </td>
                 </tr>
               </>
